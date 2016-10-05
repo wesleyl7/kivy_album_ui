@@ -1,0 +1,38 @@
+
+#:kivy 1.0
+#:import kivy kivy
+#:import ImageButtonView album_ui.ImageButtonView
+#:import ImageButtonGridLayout album_ui.ImageButtonGridLayout
+
+<ImageButtonView>:
+    BoxLayout:
+        pos: self.parent.pos
+        size: self.parent.size
+        orientation: 'vertical'
+        Label:
+            color: 0.8, 0.8, 0.8, 0
+            size_hint_y: 0.8
+        Label:
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.6
+                Rectangle:
+                    pos: self.pos
+                    size: self.size        
+            id: button_title
+            color: 0.2, 0.2, 0.2, 1
+            size_hint_y: 0.2
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+
+<ImageButtonGridLayout>:
+    canvas.before:
+        Color:
+            rgba: 0.85, 0.85, 0.85, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+
+
